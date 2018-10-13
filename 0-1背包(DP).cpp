@@ -29,7 +29,8 @@ int main()
 		best = 0;
 		for (int i = 0; i <= n; i++)
 		{
-			w[i] = v[i] = 0;
+			w[i] = 0;
+			v[i] = 0;
 			for (int j = 0; j <= c; j++)
 			{
 				m[i][j] = 0;
