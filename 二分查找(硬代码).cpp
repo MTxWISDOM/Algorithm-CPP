@@ -14,10 +14,10 @@ void f(int x, int s, int e) {
 	int left = s;
 	int right = e;
 	int mark;
-	while (left <= right) {
+	while (left <= right) { //二分 不断缩小范围
 		mark = (left + right) / 2;
 		if (a[mark] == x) {
-			cout << "x在数组中，下标为： " << mark << endl;
+			cout << "x在数组中，下标为： " << mark << endl; //找到x在数组中
 			return;
 		}
 		if (a[mark] > x) {
