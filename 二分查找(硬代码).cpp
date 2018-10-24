@@ -17,7 +17,7 @@ void f(int x, int s, int e) {
 	while (left <= right) {
 		mark = (left + right) / 2;
 		if (a[mark] == x) {
-			cout << "xÔÚÊý×éÖÐ£¬ÏÂ±êÎª£º " << mark << endl;
+			cout << "xåœ¨æ•°ç»„ä¸­ï¼Œä¸‹æ ‡ä¸ºï¼š " << mark << endl;
 			return;
 		}
 		if (a[mark] > x) {
@@ -32,14 +32,14 @@ void f(int x, int s, int e) {
 	for (int i = 0; i < n; i++) {
 		if (a[i] > x) {
 			less = i - 1;
-			cout << "Ð¡ÓÚxµÄ×î´óÔªËØÏÂ±êÊÇ£º " << less << endl;
+			cout << "å°äºŽxçš„æœ€å¤§å…ƒç´ ä¸‹æ ‡æ˜¯ï¼š " << less << endl;
 			break;
 		}
 	}
 	for (int i = n - 1; i >= 0; i--) {
 		if (a[i] < x) {
 			bigger = i + 1;
-			cout << "´óÓÚxµÄ×îÐ¡ÔªËØÏÂ±êÊÇ£º " << bigger << endl;
+			cout << "å¤§äºŽxçš„æœ€å°å…ƒç´ ä¸‹æ ‡æ˜¯ï¼š " << bigger << endl;
 			break;
 		}
 	}
@@ -51,21 +51,21 @@ int main() {
 			cin >> a[i];
 		}
 		sort(a, a + n);
-		cout << "ÅÅÐòºÃµÄÊý×é£º" << endl;
+		cout << "æŽ’åºå¥½çš„æ•°ç»„ï¼š" << endl;
 		for (int i = 0; i < n; i++) {
 			cout << a[i] << " ";
 		}
 		cout << endl;
 		cin >> x;
 		if (x > a[n - 1]){
-			cout << "²»´æÔÚ±Èx´óµÄÊý" << endl;
-			cout << "±ÈxÐ¡µÄ×î´óÔªËØµÄÏÂ±êÊÇ£º" << n - 1 << endl;
+			cout << "ä¸å­˜åœ¨æ¯”xå¤§çš„æ•°" << endl;
+			cout << "æ¯”xå°çš„æœ€å¤§å…ƒç´ çš„ä¸‹æ ‡æ˜¯ï¼š" << n - 1 << endl;
 			cout << endl;
 			continue;
 		}
 		else if (x < a[0]){
-			cout << "²»´æÔÚ±ÈxÐ¡µÄÊý" << endl;
-			cout << "±Èx´óµÄ×îÐ¡ÔªËØµÄÏÂ±êÊÇ£º0" << endl;
+			cout << "ä¸å­˜åœ¨æ¯”xå°çš„æ•°" << endl;
+			cout << "æ¯”xå¤§çš„æœ€å°å…ƒç´ çš„ä¸‹æ ‡æ˜¯ï¼š0" << endl;
 			cout << endl;
 			continue;
 		}
