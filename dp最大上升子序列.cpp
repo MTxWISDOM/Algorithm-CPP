@@ -1,6 +1,4 @@
 #include<iostream>
-#include<algorithm>
-#include<stdlib.h>
 
 using namespace std;
 
@@ -49,7 +47,7 @@ int main()
         {
             mark = 0;
         }
-        cout << "最长上升子序列的长度为" << mark <<endl;
+        cout << "鏈�闀夸笂鍗囧瓙搴忓垪鐨勯暱搴︿负" << mark <<endl;
 
 
     }
