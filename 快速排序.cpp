@@ -22,7 +22,7 @@ void QuickSort(int left, int right)
         {
             j--;
         }
-        if(j > i)
+        if(i < j)
         {
             int temp = num[j];
             num[j] = num[i];
