@@ -6,6 +6,7 @@ int num[100];
 int n;
 int mark[100];
 
+
 void Merge(int left, int mid, int right)
 {
     int i = left;
