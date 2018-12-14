@@ -19,25 +19,22 @@ int main()
     int tag;
     while(cin >> n)
     {
-        for(int i = 0; i < n; i++)
+        for(int i = 1; i <= n; i++)
         {
             cin >> num[i];
-            mark[i] = 0;
+            mark[i] = 1;
             //r[i] = 0;
         }
         tag = 1;
-        mark[0] = 1;
-        for(int i = 1; i < n; i++)
+        for(int i = 2; i <= n; i++)
         {
-            if(num[i] > num[i - 1])
+            for(int j = 1; j < i; j++)
             {
-                tag = 1;
+                if(num[j + 1] > num[j])
+                {
+                    mark[i] = MAX(mark[i - 1], mark[j] + 1);
+                }
             }
-            else
-            {
-                tag = -1;
-            }
-            mark[i] = MAX(mark[i - 1] + tag, mark[i - 1]);
         }
         cout << mark[n - 1] <<endl;
     }
