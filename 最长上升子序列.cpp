@@ -15,7 +15,6 @@ int main()
     int num[100];
     int n;
     int mark[100];
-    //int r[100];
     int tag;
     while(cin >> n)
     {
@@ -25,7 +24,6 @@ int main()
             mark[i] = 1;
             //r[i] = 0;
         }
-        tag = 1;
         for(int i = 2; i <= n; i++)
         {
             for(int j = 1; j < i; j++)
