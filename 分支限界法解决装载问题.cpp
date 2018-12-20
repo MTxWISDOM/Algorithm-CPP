@@ -13,10 +13,10 @@ int main()
     int L;
     queue<int> leave;
     int n;
-    int presentw;//µ±Ç°À©Õ¹½áµãËù´¦µÄ²ã
-    int k; //ËÑË÷ÖĞµÄÏÂ±ê
-    int c; //µÚÒ»ËÒ´¬µÄÔØÖØÁ¿
-    int bestw; //×îÓÅÔØÖØÁ¿
+    int presentw;//å½“å‰æ‰©å±•ç»“ç‚¹æ‰€å¤„çš„å±‚
+    int k; //æœç´¢ä¸­çš„ä¸‹æ ‡
+    int c; //ç¬¬ä¸€è‰˜èˆ¹çš„è½½é‡é‡
+    int bestw; //æœ€ä¼˜è½½é‡é‡
     while(scanf("%d%d", &n, &c) != EOF)
     {
         L = 0;
@@ -31,21 +31,21 @@ int main()
         k = 0;
         while(true)
         {
-            //ÏÈ¼ì²é×ó¶ù×Ó½áµã
-            int LeftSonW = presentw + weight[k]; //×ó¶ù×Ó½áµãµÄÖØÁ¿
-            if(LeftSonW <= c) //ÅĞ¶ÏÊÇ·ñÎª¿ÉĞĞ½áµã
+            //å…ˆæ£€æŸ¥å·¦å„¿å­ç»“ç‚¹
+            int LeftSonW = presentw + weight[k]; //å·¦å„¿å­ç»“ç‚¹çš„é‡é‡
+            if(LeftSonW <= c) //åˆ¤æ–­æ˜¯å¦ä¸ºå¯è¡Œç»“ç‚¹
             {
-                if(LeftSonW > bestw) //¿ÉĞĞ½áµã²¢ÇÒÎª¸üÓÅ½áµã£¬¸üĞÂbestwÖµ
+                if(LeftSonW > bestw) //å¯è¡Œç»“ç‚¹å¹¶ä¸”ä¸ºæ›´ä¼˜ç»“ç‚¹ï¼Œæ›´æ–°bestwå€¼
                 {
                     bestw = LeftSonW;
                 }
-                if(k < n) //¼ÓÈëµ½»î½áµã¶ÓÁĞ
+                if(k < n) //åŠ å…¥åˆ°æ´»ç»“ç‚¹é˜Ÿåˆ—
                 {
                     leave.push(LeftSonW);
                 }
             }
 
-            //¼ì²éÓÒ¶ù×Ó½áµã
+            //æ£€æŸ¥å³å„¿å­ç»“ç‚¹
             if(presentw + L > bestw && k < n)
             {
                 leave.push(presentw);
